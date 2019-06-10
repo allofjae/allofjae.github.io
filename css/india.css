@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam|Playfair+Display:400,900&display=swap');
+html{--gn-height : 200px;}
+#main{position:relative;
+    max-width:2560px;
+    margin-right:auto;
+    margin-left:auto
+    }
+#main .section{
+    width:100%;
+    height:100vh;
+    padding-top: var(--gn-height);
+    color:#fff;
+    box-sizing:border-box
+}
+#main .section:first-child{
+    height:100vh;
+    padding-top:100px;
+    }
+#main .section:nth-child(1){background-color:#000}
+#main .section:nth-child(2){background-color:#111}
+#main .section:nth-child(3){background-color:#222}
+#main .section:nth-child(4){background-color:#333}
+#main .section .section-content{
+    min-width: 1440px;
+    padding: 10vw;
+    height:calc(100vh - var(--gn-height));
+    margin-right:auto;
+    margin-left:auto}
+#main .section .section-content h2{color:#fff;font-size:16px;line-height:22px}
+  
+  /* img 1 */
+  .slide_img{
+      position: relative;
+      top: 10vh;
+      left: -15vw;
+      width: 40vw;
+  }
+  .sub{
+      font-family: "Nanum Myeongjo", serif;
+      font-weight: 700;
+      font-size: 18px;
+      width: 300px;
+      line-height: 170%;
+      text-align: left;
+      display: inline-block;
+      position: absolute;
+      top: 35vh;
+      left: 60vw;
+  }
+  .slide.active {
+      transform: translateX(-100%);
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900&display=swap');
+body {
+  background: white;
+}
+.animate {
+  font: bold 70px 'Playfair Display', serif;
+  color: #47827c;
+  padding: 5px; 
+  width: 700px;
+  height: 100vh;
+  text-align: left;
+  font-size: 80px; 
+  line-height: 50px;
+  position: absolute;
+  top: 67vh;
+  left:  59vw;
+  right: 0;
+  overflow: hidden;
+}
+.animate .text {
+opacity: 0.8;
+  display: inline-block;
+  -webkit-transform: translate(0, -20px);
+          transform: translate(0, -20px);
+  opacity: 0;
+  -webkit-animation: fade-in 1s forwards;
+          animation: fade-in 1s forwards;
+}
+.animate .t-2 {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+.animate .t-3 {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+.animate .t-4 {
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+.animate .t-5 {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+.animate .t-6 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+@-webkit-keyframes fade-in {
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+fieldset {
+    width: 30vw;
+    border-top:2px solid #47827c;
+}
+legend {
+    text-align: left;
+    padding-right: 15px;
+}
+
+
+
+
+    /* 스크롤 */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .mn-fullpage {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .mn-fullpage.horizontal .mn-fullpage-page {
+    float: left;
+  }
+  .mn-fullpage.horizontal .mn-nav-list {
+    bottom: 20px;
+    right: auto;
+    bottom: 20px;
+    top: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .mn-fullpage.horizontal .mn-nav-list li {
+    float: left;
+    margin-left: 10px;
+    margin-top: 0;
+  }
+  .mn-fullpage .mn-fullpage-pages {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .mn-fullpage .mn-fullpage-page {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .mn-fullpage .mn-nav-list {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .mn-fullpage .mn-nav-list li {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid dimgray;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  .mn-fullpage .mn-nav-list li:first-child {
+    margin-top: 0;
+  }
+  .mn-fullpage .mn-nav-list li.active {
+    background-color: dimgray;
+  }
+  
+  #my-fullpage .mn-fullpage-page:first-child {
+    background-color:white;
+  }
+  #my-fullpage .mn-fullpage-page:nth-child(2) {
+    background-color:white;
+  }
+  #my-fullpage .mn-fullpage-page:nth-child(3) {
+    background-color:white;
+
+  }
+  #my-fullpage .mn-fullpage-page:nth-child(4) {
+    background-color:white;
+  }
+  
+  .page-content {
+    color: #47827c;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  
+   
+  
+
+  /* 팝 */
+  body.active-modal {
+    overflow: hidden;
+  }
+  .active-modal {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
+  body.active-modal .header{
+    transition: 0.2s;
+    opacity: 1;
+  }
+  .header {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.2s;
+  }
+
+  .container{
+    position: relative;
+    top: 55vh;
+    left: 31vw;
+    width: 10vw;
+    height: 5vh;
+  }
+  .container span {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    padding: 10px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 10px;
+
+  }
+  .container span:hover {
+    background: rgba(255, 255, 255, 1);
+    
+  }
+
+  .box-modal {
+    z-index: 10000;
+    position: fixed;
+    width: 100vh;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+  }
+  .box-modal .overlay {
+    position: absolute;
+    width: 55vw;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: #af9f8c;
+    opacity: 0;
+    transition: opacity 1.3s;
+  }
+  .box-modal .body-modal {
+    max-height: 0px;
+    opacity: 0;
+    overflow: hidden;
+  }
+  .india{
+    width: 15vw;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    top: 10vh;
+    left: 28vw;
+  }
+  .india2{
+    border-radius: 5px;
+    width: 15vw;
+    display: inline-block;
+    position: absolute;
+    top: 10vh;
+    left: 11vw;
+  }
+  .india3{
+    border-radius: 5px;
+    width: 15vw;
+    display: inline-block;
+    position: absolute;
+    top: 33vh;
+    left: 11vw;
+  }
+  .india4{
+    border-radius: 5px;
+    width: 15vw;
+    display: inline-block;
+    position: absolute;
+    top: 40vh;
+    left: 28vw;
+  }
+  .india5{
+    border-radius: 5px;
+    width: 15vw;
+    display: inline-block;
+    position: absolute;
+    top: 60vh;
+    left: 11vw;
+  }
+
+  .inner-body-modal{
+    width: 70vw;
+    height: 100vh;
+    
+  }
+  .box-modal .body-modal .inner-body-modal {
+    border-radius: 8px;
+  }
+  .box-modal.modal-show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    transition: all 0.9s;
+  }
+  .box-modal.modal-show .overlay {
+    opacity: 1;
+    transition: opacity 1.3s;
+  }
+  .box-modal.modal-show .body-modal {
+    max-height: 100vh;
+    opacity: 1;
+    transition: 0.3s max-height 0.8s, 0.3s opacity 0.6s;
+  }
+
+  /* cursor */
+  .blind{display:none;visibility:hidden}
+  #cursor-dot,#cursor-bg,#progress{overflow:hidden;position:fixed;top:50%;left:50%;box-sizing:border-box;transform:translateX(-50%) translateY(-50%);pointer-events:none}
+  #cursor-dot{z-index:100000;width:4px;height:4px;border-radius:50%;background-color:white}
+  #cursor-dot.active{width: 8px;height: 8px;background-color: #3c3c3c;}
+  #cursor-bg{z-index:100000;width:15px;height:15px;border:1px solid #3c3c3c;border-radius:50%;transition:width 200ms ease-in-out,height 200ms ease-in-out,background-color 200ms ease-in-out,border-color 200ms ease-in-out}
+  #progress{z-index:100000;color:#fff;width:15px;height:15px;border-radius:50%;transition:width 200ms ease-in-out}
+  #cursor-bg.active{width:30px;height:30px;background-color:#000;mix-blend-mode:darken}
+  #progress.active{width:30px;height:30px}
+  #progress span{display:block;position:absolute;top:50%;left:50%;text-align:center;transform:translateX(-50%) translateY(-50%)}
+  #progress.active span::after{content:'';text-transform:uppercase;font-size:10px;line-height:16px;opacity:0;transition:opacity 200ms ease-in-out}
+  #progress.active span::after{opacity:1.0}
+  

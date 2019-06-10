@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700|Playfair+Display:400,900&display=swap');
+body {
+  min-width:1440px;
+  max-width: 1024px;  
+  height: 100vh;
+  max-height: 700px;
+  font-size: 16px;
+  background: #fff;
+  font-family: 'Playfair Display', serif;
+}
+
+section {
+  position: relative;
+  margin-top: 10vh; 
+  margin-left: 10vw;
+  float: left;
+  width: 50vw;
+}
+
+img {
+  display: block;
+}
+
+header {
+  margin-top: 20vh;
+  overflow: hidden;
+}
+
+.left {
+  line-height: 170%;
+  padding: 30px 20px;
+  float: left;
+  width: 190px;
+}
+
+.right {
+  padding: 30px 0;
+  float: left;
+  width: 150px;
+  text-align: center;
+}
+
+#play {
+  height: 40px;
+  width: 40px;
+  border: 0;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/1383113001_playback_play.png") center center no-repeat;
+}
+#play:focus {
+  outline: none;
+}
+
+#pause {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/1383113014_playback_pause.png") center center no-repeat;
+  height: 30px;
+  width: 30px;
+  border: 0;
+}
+#pause:focus {
+  outline: none;
+}
+
+h1 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+h2 {
+  margin: 5px 0;
+  color: #95a5a6;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+header{
+}
+
+header .bg-image{
+  background: url("../img/india_piano.jpg");
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -30vh;
+  left: 45vw;
+  width: 50vw;
+  height: 100vh;
+  animation-name: loaded-image;
+  animation-duration: 5s;
+  animation-delay: 1;
+  animation-direction: foward;
+  animation-fill-mode: linear;
+}
+
+header .image-wrapper{
+  background: 
+  linear-gradient(to bottom, rgba(35, 99, 83, 0), rgb(30, 104, 85)),
+  linear-gradient(to top, rgba(28, 99, 81, 0), rgba(90, 26, 22, 0.8));
+  height: 100vh;
+  /* position: absolute; */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes loaded-image{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+header .bg-image .image-wrapper h1{
+  color: rgb(255, 255, 255);
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  font-size: 50px;
+  -webkit-transition:color 2s
+    transition:color 2s;
+}
+
+header .bg-image .image-wrapper p{
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 20%;
+  letter-spacing: 2px;
+  line-height: 1.8em;
+}
+
+
+
