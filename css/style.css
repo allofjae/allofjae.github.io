@@ -1,4 +1,4 @@
-html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size: 15px;}
 body{margin:0;padding:0}
 ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,hgroup,p,blockquote,figure,form,fieldset,input,legend,pre,abbr,button{margin:0;padding:0}
 pre,code,address,caption,th,figcaption{font-size:1em;font-weight:normal;font-style:normal}
@@ -62,9 +62,6 @@ html{--gn-height:0px}
   max-width: 1024px;
   width: 40px;
   height: 40px;
-  position: fixed;
-  top: 6vh;
-  right: 10vw;
   cursor: pointer;
   z-index: 999;
   opacity: 1;
@@ -76,11 +73,15 @@ html{--gn-height:0px}
 .navigation .hamburger-menu:hover .hamburger::after {
   -webkit-transform: translate(0, 1px);
           transform: translate(0, 1px);
+  z-index: 9999;
 }
 .navigation .hamburger-menu .hamburger {
   width: 24px;
   height: 10px;
-  position: relative;
+  position: fixed;
+  top: 6vh;
+  left: 89vw;
+  z-index: 19999;
 }
 .navigation .hamburger-menu .hamburger::before, .navigation .hamburger-menu .hamburger::after {
   content: '';
@@ -268,7 +269,7 @@ html{--gn-height:0px}
   width: 100%;
   line-height: 170%;
   left: 0;
-  font-size: 10px;
+  font-size: 0.7rem;
   color: #ddcfbd;
   z-index: 1;
   -webkit-transform: translate(0, calc(100% + 16px));
@@ -358,40 +359,21 @@ html{--gn-height:0px}
 #progress.active span::after{opacity:1.0}
 @media only screen and (min-width:1920px){
     .notice::before{content:"1920px ~"}
+    html{font-size: 20px;}
 }
 @media only screen and (min-width:1440px) and (max-width:1919px){
     .notice::before{content:"1440px ~ 1919px"}
+    html{font-size: 15px;}
 }
 @media only screen and (min-width:1280px) and (max-width:1439px){
     .notice::before{content:"1280px ~ 1439px"}
+    html{font-size: 13px;}
 }
 @media only screen and (min-width:1024px) and (max-width:1279px){
     .notice::before{content:"1024px ~ 1279px"}
+    html{font-size: 12px;}
 }
 @media only screen and (max-width:1023px){
+    html{font-size: 11px;}
     
-}
-@media only screen and (min-width:768px) and (max-width:1023px){
-    .notice::before{content:"768px ~ 1023px"}
-    #global-nav{background-color:red}
-}
-@media only screen and (min-width:586px) and (max-width:767px){
-    .notice::before{content:"586px ~ 767px"}
-    #global-nav{background-color:blue}
-}
-@media only screen and (min-width:414px) and (max-width:585px){
-    .notice::before{content:"414px ~ 585px"}
-    #global-nav{background-color:yellow}
-}
-@media only screen and (min-width:375px) and (max-width:413px){
-    .notice::before{content:"375px ~ 413px"}
-    #global-nav{background-color:purple}
-}
-@media only screen and (min-width:320px) and (max-width:374px){
-    .notice::before{content:"320px ~ 374px"}
-    #global-nav{background-color:green}
-}
-@media only screen and (max-width:319px){
-    .notice::before{content:"~ 319px"}
-    #global-nav{background-color:orange}
 }

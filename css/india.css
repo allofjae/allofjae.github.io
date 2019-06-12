@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Kalam|Playfair+Display:400,900&display=swap');
 html{--gn-height : 200px;}
-#main{position:relative;
-    max-width:2560px;
-    margin-right:auto;
-    margin-left:auto
+body {width: 100vw;
+  padding: 10vh 10vw 0 10vw;
+  height: 100vh;
     }
 #main .section{
     width:100%;
@@ -28,23 +27,7 @@ html{--gn-height : 200px;}
     margin-left:auto}
 #main .section .section-content h2{color:#fff;font-size:16px;line-height:22px}
   
-  /* img 1 */
-  .slide_img{
-      
-  }
-  .sub{
-      font-family: "Nanum Myeongjo", serif;
-      font-weight: 700;
-      font-size: 18px;
-      width: 300px;
-      margin-bottom: 30px;
-      line-height: 170%;
-      text-align: left;
-      display: inline-block;
-      position: absolute;
-      top: 30vh;
-      left: 60vw;
-  }
+  
   .slide.active {
       transform: translateX(-100%);
   }
@@ -57,19 +40,19 @@ body {
   font: bold 70px 'Playfair Display', serif;
   color: #47827c;
   padding: 5px; 
-  width: 700px;
-  height: 100vh;
+  width: 40vw;
   text-align: left;
   font-size: 80px; 
   line-height: 50px;
   position: absolute;
-  top: 60vh;
-  left:  59vw;
-  right: 0;
+  top: 50vh;
+  left:50vw;
+  float: right;
+  box-sizing: border-box;
   overflow: hidden;
 }
 .animate .text {
-opacity: 0.8;
+  opacity: 0.8;
   display: inline-block;
   -webkit-transform: translate(0, -20px);
           transform: translate(0, -20px);
@@ -114,14 +97,13 @@ opacity: 0.8;
 }
 fieldset {
     width: 30vw;
+    height: 100vh;
     border-top:2px solid #47827c;
 }
 legend {
     text-align: left;
     padding-right: 15px;
 }
-
-
 
 
     /* 스크롤 */
@@ -210,7 +192,6 @@ legend {
   .page-content {
     color: #47827c;
     text-align: center;
-    margin-top: 100px;
   }
 
   
@@ -242,20 +223,21 @@ legend {
     transition: 0.2s;
   }
   .container {
-    position: relative;
-    top: -10%;
+    box-sizing: border-box;
   }
 
   .container img{
-      position: relative;
-      top: 25vh;
-      left: -15vw;
-      width: 40vw;
+    box-sizing: border-box;
+    float: left;
+    padding: 30px;
+    margin-top: 80px;
+    margin-right: 50px;
+    width: 40vw;
   }
   .container span {
-    position: relative;
-    top: 0vh;
-    left: -35vw;
+    position: absolute;
+    top: 300px;
+    left: 20vw;
     transform: translate( -50%, -50% );
     display: inline-block;
     background: rgba(255, 255, 255, 0.2);
@@ -271,6 +253,23 @@ legend {
     
   }
 
+  /* img 1 */
+  .sub{
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 700;
+    font-size: 18px;
+    width: 42vh;
+    position: absolute;
+    top: 20vh;
+    left: 50vw;
+    padding: 10px;
+    box-sizing: border-box;
+    float: right;
+    line-height: 170%;
+    text-align: left;
+    /* display: inline-block; */
+    
+}
   .box-modal {
     z-index: 10000;
     position: fixed;

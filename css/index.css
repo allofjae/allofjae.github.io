@@ -1,18 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1|Libre+Baskerville|Raleway&display=swap');
 #main{
     width: 100vw;
+    padding: 10vh 10vw 0 10vw;
     height: 100vh;
-}
-h2{
-    font-family: 'Playfair Display', serif;
-    position: absolute;
-    top: 20vh;
-    left: 10vw;
-    box-sizing: border-box;
-    color: #47827c;
-    font-size: 80px;
-    text-align: center;
-    letter-spacing : 10px;
 }
 .white{
     color: white;
@@ -34,17 +24,6 @@ h2{
   }
 .bg_white{
     background-color: white;
-}
-.bg_img {
-    position: relative;
-    top: 15vh;
-    left: 60vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50vh;
-    display: block;
-    opacity: 0.9;
-    z-index: 1;
 }
 .logo {
     position: absolute;
@@ -75,45 +54,65 @@ body{
     -webkit-perspective: 1000;
     perspective: 1000;
   }
+  
+  .animate-slide.ng-hide-add,
+  .animate-slide.ng-hide-remove {
+    display:block!important;
+  }
+  
+  .animate-slide.ng-hide-remove.ng-hide-remove-active {
+    -webkit-animation:0.5s slide-up;
+    animation:0.5s slide-up;
+  }
+  
+  .animate-slide.ng-hide-add.ng-hide-add-active {
+    -webkit-animation:0.5s slide-down;
+    animation:0.5s slide-down;
+  }
+  
+  .animate-slide.ng-hide {
+    top:80%;
+    display:block!important;
+  }
+
   .hide{
-    height: 50vh;
+    width: 100vw;
+    padding: 10vh 10vw 0 10vw;
+    height: 100vh;
   }
   .hide ul{
     list-style-type: none;
-    margin-left: 10vw;
-    margin-top: 10vh;
-    height: 10vh;
   }
   .hide ul li{
     font-family: 'Gothic A1', sans-serif;
     padding-top: 100px;
     color: white;
     text-align: left;
-    width: 350px;
-    font-size: 15px;
+    width: 200px;
+    font-size: 1em;
     line-height: 170%;
     text-align: left;
     opacity: 1;
+    margin-right: 100px;
     float: left;
   }
   .hide ul li span{
-    font-size: 20px;
+    font-size: 1.5em;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
   }
   .hide_sub{
     color: white;
-    font-size: 17px;
-    position: relative;
-    top: 24vh;
-    left: 35vw;
+    font-size: 1.7em;
+    margin-top: 100px;
+    padding-top: 30px;
+    margin-left: 300px;
     width: 100vw;
     float: left;
     font-family: 'Raleway', sans-serif;
     line-height: 170%;
     opacity: 0.8;
     border-top: 1px solid white;
-    padding-top: 30px;
   }
   .two::before{
     display: block;
@@ -123,7 +122,7 @@ body{
   .two li{
     float: left;
     text-align: left;
-    height: 10vh;
+    margin-right: 100px;
   }
   .hide_bg {
     z-index: -1;
@@ -148,45 +147,40 @@ body{
     right:0;
     margin:auto;
   }
-  
-  .animate-slide.ng-hide-add,
-  .animate-slide.ng-hide-remove {
-    display:block!important;
-  }
-  
-  .animate-slide.ng-hide-remove.ng-hide-remove-active {
-    -webkit-animation:0.5s slide-up;
-    animation:0.5s slide-up;
-  }
-  
-  .animate-slide.ng-hide-add.ng-hide-add-active {
-    -webkit-animation:0.5s slide-down;
-    animation:0.5s slide-down;
-  }
-  
-  .animate-slide.ng-hide {
-    top:80%;
-    display:block!important;
-  }
   .index{
-      width: 500px;
+      width: 50vw;
+      box-sizing:border-box;
+      margin:120px 0 50px 0; 
+      padding-right: 16vw;
       color: #47827c;
-      font-size: 30px;
+      font-size: 2.5em;
       line-height: 170%;
-      position: relative;
-      top: -250px;
-      left: 10vw;
       font-family: 'Raleway', sans-serif;
   }
+  .bg_img {
+    float: right;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25%;
+    padding-top: 134px;
+    position: absolute;
+    top: 0;
+    left: 60vw;
+    display: block;
+    opacity: 0.9;
+    z-index: 1;
+}
   .insub{
       color: dimgray;
-      width: 355px;
-      font-size: 14px;
+      box-sizing: border-box;
+      width: 50vw;
+      padding-right: 16vw;
+      margin-bottom: 50px;
+      font-size: 1.3em;
       line-height: 170%;
-      position: relative;
-      top:-25vh;
-      left: 10vw;
       font-family: 'Gothic A1', sans-serif;
+
   }
   
   /* Chrome, Safari, Opera */
@@ -216,3 +210,25 @@ body{
     0%  {top:0;}
     100%   {top:80%;}
   }
+
+@media only screen and (min-width:1920px){
+    .notice::before{content:"1920px ~"}
+    html{font-size: 14px;}
+    .hide_sub{margin-top: 90px;}
+}
+
+@media only screen and (min-width:1112px) and (max-width:1279px){
+    .notice::before{content:"1024px ~ 1279px"}
+    html{font-size: 13px;}
+    .hide_sub{margin-top: 90px;}
+}
+@media only screen and (max-width:1112px){
+    html{font-size: 11px;}
+    .hide_sub{margin-top: 50px;}
+    
+}
+@media only screen and (min-width:768px) and (max-width:1023px){
+  .notice::before{content:"768px ~ 1023px"}
+  html{font-size: 10px;}
+  .hide_sub{margin-top: 30px;}
+}
