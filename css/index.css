@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1|Libre+Baskerville|Raleway&display=swap');
 #main{
     width: 100vw;
     height: 100vh;
@@ -24,16 +25,18 @@ h2{
 }
 .none{
     opacity: 0;
+    z-index: -9999;
 }
 .img{
     -webkit-filter: grayscale(50%); /* Safari */
     filter: grayscale(50%);
     transition: 0.5s ease-in-out;
+    opacity: 0;
   }
 .bg_white{
     background-color: white;
 }
-.bg {
+.bg_img {
     position: relative;
     top: 15vh;
     left: 60vw;
@@ -73,15 +76,76 @@ body{
     perspective: 1000;
   }
   .hide{
-      font-family: "Nanum Myeongjo", serif;
-      color: white;
-      text-align: left;
-      width: 500px;
+    height: 50vh;
+  }
+  .hide ul{
+    list-style-type: none;
     margin-left: 10vw;
-    margin-top: 50vh;
+    margin-top: 10vh;
+    height: 10vh;
+  }
+  .hide ul li{
+    font-family: 'Gothic A1', sans-serif;
+    padding-top: 100px;
+    color: white;
+    text-align: left;
+    width: 350px;
     font-size: 15px;
     line-height: 170%;
     text-align: left;
+    opacity: 1;
+    float: left;
+  }
+  .hide ul li span{
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+  }
+  .hide_sub{
+    color: white;
+    font-size: 17px;
+    position: relative;
+    top: 24vh;
+    left: 35vw;
+    width: 100vw;
+    float: left;
+    font-family: 'Raleway', sans-serif;
+    line-height: 170%;
+    opacity: 0.8;
+    border-top: 1px solid white;
+    padding-top: 30px;
+  }
+  .two::before{
+    display: block;
+    content: '';
+    clear: both;
+  }
+  .two li{
+    float: left;
+    text-align: left;
+    height: 10vh;
+  }
+  .hide_bg {
+    z-index: -1;
+    background: url("../img/main_bg.png");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    min-height: 100%;
+    min-width: 1024px;
+    
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+    margin:auto;
   }
   
   .animate-slide.ng-hide-add,
@@ -108,23 +172,22 @@ body{
       color: #47827c;
       font-size: 30px;
       line-height: 170%;
-      font-weight: bold;
       position: relative;
-      top: -300px;
+      top: -250px;
       left: 10vw;
-      font-family: "Nanum Myeongjo", serif;
+      font-family: 'Raleway', sans-serif;
   }
   .insub{
       color: dimgray;
       width: 355px;
-      font-size: 13px;
-      font-weight: 700;
+      font-size: 14px;
       line-height: 170%;
       position: relative;
-      top:-30vh;
+      top:-25vh;
       left: 10vw;
-      font-family: "Nanum Myeongjo", serif;
+      font-family: 'Gothic A1', sans-serif;
   }
+  
   /* Chrome, Safari, Opera */
   @-webkit-keyframes slide-up
   {

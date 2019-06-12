@@ -11,8 +11,7 @@ body {
 
 section {
   position: relative;
-  margin-top: 10vh; 
-  margin-left: 10vw;
+  left: 9vw;
   float: left;
   width: 50vw;
 }
@@ -24,20 +23,6 @@ img {
 header {
   margin-top: 20vh;
   overflow: hidden;
-}
-
-.left {
-  line-height: 170%;
-  padding: 30px 20px;
-  float: left;
-  width: 190px;
-}
-
-.right {
-  padding: 30px 0;
-  float: left;
-  width: 150px;
-  text-align: center;
 }
 
 #play {
@@ -70,20 +55,11 @@ h2 {
   color: #95a5a6;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-
-header{
-}
-
-header .bg-image{
+.bg-image{
   background: url("../img/india_piano.jpg");
   background-repeat: none;
   background-size: cover;
   background-position: center;
-  position: absolute;
-  top: -30vh;
-  left: 45vw;
-  width: 50vw;
   height: 100vh;
   animation-name: loaded-image;
   animation-duration: 5s;
@@ -92,16 +68,11 @@ header .bg-image{
   animation-fill-mode: linear;
 }
 
-header .image-wrapper{
+.image-wrapper{
   background: 
   linear-gradient(to bottom, rgba(35, 99, 83, 0), rgb(30, 104, 85)),
   linear-gradient(to top, rgba(28, 99, 81, 0), rgba(90, 26, 22, 0.8));
   height: 100vh;
-  /* position: absolute; */
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
 }
 
 @keyframes loaded-image{
@@ -112,19 +83,35 @@ header .image-wrapper{
     opacity: 1;
   }
 }
+.player {
+  width: 100%;
+}
 
-header .bg-image .image-wrapper h1{
+.left {
+  line-height: 170%;
+  padding: 30px 20px;
+  float: left;
+  width: 190px;
+}
+
+.right {
+  padding: 30px 0;
+  float: left;
+  width: 150px;
+  text-align: center;
+}
+.bg-image .image-wrapper h1{
   color: rgb(255, 255, 255);
   font-family: 'Playfair Display', serif;
   position: relative;
   text-align: center;
-  top: 50%;
+  top: 60vh;
   font-size: 50px;
-  -webkit-transition:color 2s
-    transition:color 2s;
+  -webkit-transition:color 2s;
+  transition:color 2s;
 }
 
-header .bg-image .image-wrapper p{
+.bg-image .image-wrapper p{
   color: #fff;
   text-align: center;
   position: relative;

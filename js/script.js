@@ -24,7 +24,7 @@ window.onload = function() {
   }
 }
 
-// player
+player
 document.getElementById("play").onclick = function() { 
   document.getElementById('demo').play();
 }

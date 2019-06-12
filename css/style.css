@@ -31,7 +31,7 @@ body,input,textarea,select,button{text-align:left;font-synthesis:none;-moz-font-
 .blind{display:none;visibility:hidden}
 html{--gn-height:0px}
 
-
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700|Playfair+Display:400,900&display=swap');
 *,
 *::before,
@@ -45,16 +45,15 @@ html{--gn-height:0px}
   transition: opacity .3s;
 }
 .logo-text {
-    display: block;
-    position: fixed;
-    z-index: 9999;
-    top: 5vh;
-    left :10vw;
+  display: block;
+  position: fixed;
+  z-index: 9999;
+  top: 5vh;
+  left :10vw;
   font-size: 20px;
-  font-weight: bold;
   background-size: cover;
   color: #47827c;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Libre Baskerville', serif;
 }
 .navigation .hamburger-menu {
   display:block;
@@ -231,7 +230,7 @@ html{--gn-height:0px}
   }
 }
 .navigation .menu-container .menu li a {
-  font-family: "Nanum Myeongjo", serif;
+  font-family: 'Libre Baskerville', serif;
   display: block;
   color: #fff;
   font-size: 1.5rem;
@@ -344,6 +343,19 @@ html{--gn-height:0px}
     line-height:20px
     }
 .notice::before{content:"--"}
+
+/* cursor */
+.blind{display:none;visibility:hidden}
+#cursor-dot,#cursor-bg,#progress{overflow:hidden;position:fixed;top:50%;left:50%;box-sizing:border-box;transform:translateX(-50%) translateY(-50%);pointer-events:none}
+#cursor-dot{z-index:100000;width:4px;height:4px;border-radius:50%;background-color:white}
+#cursor-dot.active{width: 8px;height: 8px;background-color: #3c3c3c;}
+#cursor-bg{z-index:100000;width:15px;height:15px;border:1px solid #3c3c3c;border-radius:50%;transition:width 200ms ease-in-out,height 200ms ease-in-out,background-color 200ms ease-in-out,border-color 200ms ease-in-out}
+#progress{z-index:100000;color:#fff;width:15px;height:15px;border-radius:50%;transition:width 200ms ease-in-out}
+#cursor-bg.active{width:30px;height:30px;background-color:#000;mix-blend-mode:darken}
+#progress.active{width:30px;height:30px}
+#progress span{display:block;position:absolute;top:50%;left:50%;text-align:center;transform:translateX(-50%) translateY(-50%)}
+#progress.active span::after{content:'';text-transform:uppercase;font-size:10px;line-height:16px;opacity:0;transition:opacity 200ms ease-in-out}
+#progress.active span::after{opacity:1.0}
 @media only screen and (min-width:1920px){
     .notice::before{content:"1920px ~"}
 }

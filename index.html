@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Layout</title>
+    <title>Main</title>
     <link rel="stylesheet" href="./css/style.css"/>
     <link rel="stylesheet" href="./css/index.css"/>
     
@@ -12,56 +12,77 @@
 </head>
 <body>
     <header id="head">
-            <nav id="main-navigation" class="navigation">
-                <div class="nav-content">
-                    <a href="#" class="logo">
-                        <div class="logo-text">Stoker</div>
-                    </a>
-                    <div class="hamburger-menu">
-                        <div class="hamburger"></div>
-                    </div>
+        <nav id="main-navigation" class="navigation">
+            <div class="nav-content">
+                <!-- lt.txt.logo -->
+                <a href="index.html" class="logo">
+                    <div class="logo-text">Stoker</div>
+                </a>
+                <!-- nav button -->
+                <div class="hamburger-menu">
+                    <div class="hamburger"></div>
                 </div>
-                <div class="menu-container">
-                    <ul class="menu">
-                        <li class="menu-link"><a class="link" href="index.html">Home</a></li>
-                        <li class="menu-link"><a class="link" href="india.html">Family</a></li>
-                        <li class="menu-link"><a class="link" href="#">India Stoker</a></li>
-                        <li class="menu-link"><a class="link" href="#">Secret</a></li>
-                        <li class="menu-link menu-line"></li>
-                        <li class="menu-link"><a class="link" href="Duet.html">Duet</a></li>
-                    <div class="menu-info">
-                        <p>STOKER 2013</p>
-                    </div>
+            </div>
+            <!-- full page nav -->
+            <div class="menu-container">
+                <ul class="menu">
+                    <li class="menu-link"><a class="link" href="index.html">Home</a></li>
+                    <li class="menu-link"><a class="link" href="india.html">Family</a></li>
+                    <li class="menu-link"><a class="link" href="#">India Stoker</a></li>
+                    <li class="menu-link"><a class="link" href="#">Secret</a></li>
+                    <li class="menu-link menu-line"></li>
+                    <li class="menu-link"><a class="link" href="Duet.html">Duet</a></li>
+                <div class="menu-info">
+                    <p>STOKER 2013</p>
                 </div>
-            </nav>
+            </div>
+        </nav>
         </header>
-        <div ng-app="ngAnimate">
-                <div class="animate-slide" ng-show="slide" ng-click="slide=!slide">
-                    <p class="hide">나쁜일은 가끔 해줘야한다. <br> 아니면 더큰 나쁜일을 할수 있기때문이다. <br>
-                        엄마의 블라우스 위에 아빠의 벨트, 삼촌이 사준 구두를 신고 있죠. <br>
-                        이게 나에요.
-                    </p>
-                </div>
-              </div>
-        <div id="main">
-            <img class="bg" src="./img/main.jpg" alt="main_bg">
-            <p class="index">
-                    Sometimes you need to do something bad to stop you from doing something worse. <br>
-            <p class="insub"> 18살 생일, 아빠가 죽고 삼촌이 찾아왔다.
-                    18살 생일날 갑작스런 사고로 아빠를 잃은 소녀 인디아. 
-                     그녀 앞에 존재조차 몰랐던 삼촌 찰리가 찾아온다. </p>         
-         </div>
-         <div id="cursor-dot">&nbsp;</div>
+        <!-- hide page -->
+    <div ng-app="ngAnimate">
+        <div class="animate-slide" ng-show="slide" ng-click="slide=!slide">
+            <div class="hide_bg"></div>
+            <div class="hide">
+                <ul>
+                    <li><span>DIRECTED BY</span><br>박찬욱</li>
+                    <li><span>RELEASE DATE</span><br>2013. 2. 28</li>
+                </ul>
+                <ul class="two">
+                    <li><span>STARRING</span><br> Mia Wasikowska</li>
+                    <li> <span>WRITTEN BY</span><br> Wentworth Miller</li>
+                    <li><span>GENRE</span><br>드라마, 스릴러 </li>
+                </ul>
+                <p class="hide_sub">
+                        I wear my father's belt tied around my mother's blouse, and shoes which are <br>
+                        from my uncle. This is me. Just as a flower does not choose its color, <br> 
+                        we are not responsible for what we have come to be. Only once you realize <br> 
+                        this do you become free, and to become adult is to become free.
+                </p>
+            </div>
+        </div>
+    </div>
+        <!-- main page -->
+    <div id="main">
+       <a class="bg" href="#"><img class="bg_img" src="./img/main.jpg" alt="main_bg"></a>
+        <p class="index">
+            Sometimes you need to do something bad to stop you from doing something worse. <br>
+        <p class="insub"> 
+            18살 생일날 갑작스런 사고로 아빠를 잃은 소녀 인디아. 
+            그녀 앞에 존재조차 몰랐던 삼촌 찰리가 찾아온다. </p>         
+    </div>
+<div id="cursor-dot">&nbsp;</div>
 <div id="cursor-bg">&nbsp;</div>
 <div id="progress"><span>&nbsp;</span></div>
 
+<!-- footer -->
 <footer id="global-footer">
     <div class="gf-content">
         <a href="#">Trailer</a>
         <a href="#">IMDB</a>
     </div>
 </footer>
-<div class="notice"></div>
+
+
 <script src="./js/script.js"></script>
 <script src="./js/cursor.js"></script>
 <script src="./vendor/gsap/TweenMax.min.js" type="text/javascript"></script>
@@ -69,19 +90,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.8/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.8/angular-animate.js"></script>
 <script>
-    var sibling = $(".animate-slide").siblings(".ng-hide");
-    var logo = $(".logo-text");
+    // hide page jquery.
+    $('.hide_bg').removeClass("hide_bg");
 $(".animate-slide").click(function(){
   if($(this).hasClass("ng-hide")){
-    $('.bg').fadeIn('fast').css('opacity',0).stop().attr("src", "./img/bgChange.jpg").animate({opacity:0.9},300);
+    // $('.bg').fadeIn('fast').css('opacity',0).stop().attr("src", "./img/bgChange.jpg").animate({opacity:0.9},300);
     $('.logo-text').addClass("white");
     $('.insub').addClass("none");
-    $('.bg').addClass("img");
+    $('.bg_img').addClass("none");
+    $('.index').addClass("none");
+    $('.hide').addClass("hide_bg");
   }else{
     $('.bg').fadeOut('slow').css('opacity',0).stop().attr('src', './img/main.jpg').animate({opacity:0.8},500);
     $('.logo-text').removeClass("white");
     $('.insub').removeClass("none");
     $('.bg').removeClass("img");
+    $('.index').removeClass("none");
+    $('.hide_bg').removeClass("hide_bg");
   }
 });
 </script>

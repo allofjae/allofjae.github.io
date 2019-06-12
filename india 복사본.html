@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout</title>
+    <!-- <link rel="stylesheet" href="./css/style.css"/> -->
+    <link rel="stylesheet" href="./css/india2.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-2.2.4.min.js">
+  </head>
+<body>
+<header id="head">
+    <nav id="main-navigation" class="navigation">
+        <div class="nav-content">
+            <!-- lt.txt.logo -->
+            <a href="index.html" class="logo">
+                <div class="logo-text">Stoker</div>
+            </a>
+            <!-- nav button -->
+            <div class="hamburger-menu">
+                <div class="hamburger"></div>
+            </div>
+        </div>
+        <!-- full page nav -->
+        <div class="menu-container">
+            <ul class="menu">
+                <li class="menu-link"><a class="link" href="index.html">Home</a></li>
+                <li class="menu-link"><a class="link" href="india.html">Family</a></li>
+                <li class="menu-link"><a class="link" href="#">India Stoker</a></li>
+                <li class="menu-link"><a class="link" href="#">Secret</a></li>
+                <li class="menu-link menu-line"></li>
+                <li class="menu-link"><a class="link" href="Duet.html">Duet</a></li>
+            <div class="menu-info">
+                <p>STOKER 2013</p>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- slide -->
+<div class="slider">
+    <div class="slider-wrapper flex">
+      <div class="slide flex">
+        <div class="slide-image slider-link prev"><img src="https://goranvrban.com/codepen/img2.jpg"><div class="overlay"></div></div>
+        <div class="slide-content">
+          <div class="slide-date">30.07.2017.</div>
+          <div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+          <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+          <div class="slide-more">READ MORE</div>
+        </div>	
+      </div>
+      <div class="slide flex">
+        <div class="slide-image slider-link next"><img src="https://goranvrban.com/codepen/img3.jpg"><div class="overlay"></div></div>
+        <div class="slide-content">
+          <div class="slide-date">30.08.2017.</div>
+          <div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+          <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+          <div class="slide-more">READ MORE</div>
+        </div>	
+      </div>	
+      <div class="slide flex">
+        <div class="slide-image slider-link next"><img src="https://goranvrban.com/codepen/img5.jpg"><div class="overlay"></div></div>
+        <div class="slide-content">
+          <div class="slide-date">30.09.2017.</div>
+          <div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+          <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+          <div class="slide-more">READ MORE</div>
+        </div>	
+      </div>
+        <div class="slide flex">
+        <div class="slide-image slider-link next"><img src="https://goranvrban.com/codepen/img6.jpg"><div class="overlay"></div></div>
+        <div class="slide-content">
+          <div class="slide-date">30.10.2017.</div>
+          <div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+          <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+          <div class="slide-more">READ MORE</div>
+        </div>	
+      </div>
+    </div>
+    <div class="arrows">
+    <a href="#" title="Previous" class="arrow slider-link prev"></a>
+    <a href="#" title="Next" class="arrow slider-link next"></a>
+    </div>
+    </div>
+<!-- mouse cursor -->
+<div id="cursor-dot">&nbsp;</div>
+<div id="cursor-bg">&nbsp;</div>
+<div id="progress"><span>&nbsp;</span></div>
+
+<!-- footer -->
+<footer id="global-footer">
+    <div class="gf-content">
+        <h2>Footer</h2>
+    </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/slider.js"></script>
+<!-- overay event, bg blur effect -->
+<script>
+//   $('#edit').on('click', function(){
+//   $('.slide_img').addClass('active-modal');
+//   $('.logo-text').addClass('active-modal');
+//   $('.box-modal').addClass('modal-show');
+
+// });
+
+// $('.overlay').on('click', function(){
+//   $('.slide_img').removeClass('active-modal');
+//   $('.logo-text').removeClass('active-modal');
+//   $('.box-modal').removeClass('modal-show');
+// })
+
+( function($) {
+  
+  $(document).ready(function() {
+    
+    var s           = $('.slider'),
+        sWrapper    = s.find('.slider-wrapper'),
+        sItem       = s.find('.slide'),
+        btn         = s.find('.slider-link'),
+        sWidth      = sItem.width(),
+        sCount      = sItem.length,
+        slide_date  = s.find('.slide-date'),
+        slide_title = s.find('.slide-title'),
+        slide_text  = s.find('.slide-text'),
+        slide_more  = s.find('.slide-more'),
+        slide_image = s.find('.slide-image img'),
+        sTotalWidth = sCount * sWidth;
+    
+    sWrapper.css('width', sTotalWidth);
+    sWrapper.css('width', sTotalWidth);
+    
+    var clickCount  = 0;
+    
+    btn.on('click', function(e) {
+      e.preventDefault();
+
+      if( $(this).hasClass('next') ) {
+        
+        ( clickCount < ( sCount - 1 ) ) ? clickCount++ : clickCount = 0;
+      } else if ( $(this).hasClass('prev') ) {
+        
+        ( clickCount > 0 ) ? clickCount-- : ( clickCount = sCount - 1 );
+      }
+      TweenMax.to(sWrapper, 0.4, {x: '-' + ( sWidth * clickCount ) })
+
+
+      //CONTENT ANIMATIONS
+
+      var fromProperties = {autoAlpha:0, x:'-50', y:'-10'};
+      var toProperties = {autoAlpha:0.8, x:'0', y:'0'};
+
+      TweenLite.fromTo(slide_image, 1, {autoAlpha:0, y:'40'}, {autoAlpha:1, y:'0'});
+      TweenLite.fromTo(slide_date, 0.4, fromProperties, toProperties);
+      TweenLite.fromTo(slide_title, 0.6, fromProperties, toProperties);
+      TweenLite.fromTo(slide_text, 0.8, fromProperties, toProperties);
+      TweenLite.fromTo(slide_more, 1, fromProperties, toProperties);
+
+    });
+          
+  });
+});
+
+$('.overlay').addClass('overlay-blue')
+</script>
+</body>
+</html>

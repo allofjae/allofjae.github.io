@@ -15,12 +15,6 @@ function OnMouseMoveWindow(e) {
     // 현재 커서의 좌표값 찾기
     // console.log(e);
     var posX = e.pageX, posY = e.pageY;
-    // console.log(posX, posY);
-    // $cursorDot.style.top = posY + 'px';
-    // $cursorDot.style.left = posX + 'px';
-    // TweenMax.killTweensOF($cursorDot);
-    // TweenMax.killTweensOF($cursorBG);
-    // TweenMax.killTweensOF($progress);
     TweenMax.to($cursorDot, 0.15, {css : {top : posY, left : posX}, ease: Quad.easeInOut});
     TweenMax.to($cursorBG, 0.1, {css : {top : posY, left : posX}, ease: Quad.easeInOut});
     TweenMax.to($progress, 0.15, {css : {top : posY, left : posX}, ease: Quad.easeInOut});
