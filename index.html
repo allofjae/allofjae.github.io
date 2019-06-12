@@ -94,14 +94,14 @@
     $('.hide_bg').removeClass("hide_bg");
 $(".animate-slide").click(function(){
   if($(this).hasClass("ng-hide")){
-    // $('.bg').fadeIn('fast').css('opacity',0).stop().attr("src", "./img/bgChange.jpg").animate({opacity:0.9},300);
+    $('.bg_img').fadeIn('fast').css('opacity',0).stop();
     $('.logo-text').addClass("white");
     $('.insub').addClass("none");
     $('.bg_img').addClass("none");
     $('.index').addClass("none");
     $('.hide').addClass("hide_bg");
   }else{
-    $('.bg').fadeOut('slow').css('opacity',0).stop().attr('src', './img/main.jpg').animate({opacity:0.8},500);
+    $('.bg_img').fadeOut('slow').css('opacity',0).stop().attr('src', './img/main.jpg').animate({opacity:0.8},500);
     $('.logo-text').removeClass("white");
     $('.insub').removeClass("none");
     $('.bg').removeClass("img");
