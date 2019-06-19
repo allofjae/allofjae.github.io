@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Kalam|Playfair+Display:400,900&display=swap');
 html{--gn-height : 200px;}
-body {width: 100vw;
+body {
+  width: 100vw;
   padding: 10vh 10vw 0 10vw;
-  height: 100vh;
+  height: 1080px;
+  overflow: hidden;
     }
 #main .section{
     width:100%;
+    height: 1080px;
     height:100vh;
     padding-top: var(--gn-height);
     color:#fff;
@@ -32,22 +35,19 @@ body {width: 100vw;
       transform: translateX(-100%);
   }
 
-  @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900&display=swap');
-body {
-  background: white;
-}
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900&display=swap');
 .animate {
   font: bold 70px 'Playfair Display', serif;
   color: #47827c;
-  padding: 5px; 
-  width: 40vw;
+  width: 50%;
   text-align: left;
   font-size: 80px; 
   line-height: 50px;
-  position: absolute;
-  top: 50vh;
-  left:50vw;
+  padding-left: 10%;
   float: right;
+  position: relative;
+  top: 50vh;
+  left: 32vw;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -104,98 +104,6 @@ legend {
     text-align: left;
     padding-right: 15px;
 }
-
-
-    /* 스크롤 */
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
-  html, body {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .mn-fullpage {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-  .mn-fullpage.horizontal .mn-fullpage-page {
-    float: left;
-  }
-  .mn-fullpage.horizontal .mn-nav-list {
-    bottom: 20px;
-    right: auto;
-    bottom: 20px;
-    top: auto;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .mn-fullpage.horizontal .mn-nav-list li {
-    float: left;
-    margin-left: 10px;
-    margin-top: 0;
-  }
-  .mn-fullpage .mn-fullpage-pages {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  .mn-fullpage .mn-fullpage-page {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .mn-fullpage .mn-nav-list {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
-  .mn-fullpage .mn-nav-list li {
-    display: block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    border: 1px solid dimgray;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: all .3s;
-  }
-  .mn-fullpage .mn-nav-list li:first-child {
-    margin-top: 0;
-  }
-  .mn-fullpage .mn-nav-list li.active {
-    background-color: dimgray;
-  }
-  
-  #my-fullpage .mn-fullpage-page:first-child {
-    background-color:white;
-  }
-  #my-fullpage .mn-fullpage-page:nth-child(2) {
-    background-color:white;
-  }
-  #my-fullpage .mn-fullpage-page:nth-child(3) {
-    background-color:white;
-
-  }
-  #my-fullpage .mn-fullpage-page:nth-child(4) {
-    background-color:white;
-  }
-  
-  .page-content {
-    color: #47827c;
-    text-align: center;
-  }
-
-  
-   
   
 
   /* 팝 */
@@ -223,53 +131,108 @@ legend {
     transition: 0.2s;
   }
   .container {
-    box-sizing: border-box;
-  }
-
-  .container img{
+    position: relative;
+    width: 50%;
     box-sizing: border-box;
     float: left;
-    padding: 30px;
-    margin-top: 80px;
-    margin-right: 50px;
-    width: 40vw;
+    padding-right: 100px;
+    margin : 20vh 10vw 0 10vw;
   }
   .container span {
     position: absolute;
-    top: 300px;
-    left: 20vw;
-    transform: translate( -50%, -50% );
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 100px;
-    padding: 10px 20px;
-    font-size: 11px;
-    font-weight: 700;
-    margin-top: 10px;
-
-  }
-  .container span:hover {
-    background: rgba(255, 255, 255, 1);
-    
+    top: 50%;
+    left: 50%;
   }
 
-  /* img 1 */
-  .sub{
-    font-family: "Nanum Myeongjo", serif;
-    font-weight: 700;
-    font-size: 18px;
-    width: 42vh;
+  .img-view {
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: -5vw;
+  }
+  .img-view img, .img-view .caption {
     position: absolute;
-    top: 20vh;
-    left: 50vw;
-    padding: 10px;
+    transition: all 0.6s linear;
+  }
+  .img-view img {
+    display: block;
+    width: 100%;
+    transition: all 0.6s linear;
+  }
+  .img-view .caption {
+    font-family: 'Playfair Display', serif;
+    z-index: 111;
+    text-align: center;
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top: 50vh;
+    left: 0;
+    opacity: 0;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .img-view .caption:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+  .img-view .caption .content {
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 1s linear;
+  }
+  .img-view:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  .img-view p {
+    font-weight: 100;
+    opacity: 0;
+    transform: translate(0, 10px);
+    -webkit-filter: blur(5px);
+    transition: all 0.4s ease;
+  }
+  .img-view:hover .caption, .img-view:hover:after {
+    opacity: 1;
+  }
+  .img-view:hover p {
+    color: #47827c;
+    font-weight: 700;
+    padding: 15px;
+    /* border-radius: 10%; */
+    opacity: 1;
+    transform: translate(0, 33vh);
+    -webkit-filter: blur(0);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .img-view:hover img {
+    transform: scale(0.98);
+    /* opacity: 0.7; */
+  }
+  
+  
+  .sub{
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    width: 30%;
+    margin-right: 10vw;
+    padding-top: 12%;
     box-sizing: border-box;
+    color: #47827c;
     float: right;
     line-height: 170%;
     text-align: left;
-    /* display: inline-block; */
-    
-}
+  }
   .box-modal {
     z-index: 10000;
     position: fixed;
@@ -285,7 +248,7 @@ legend {
     height: 100%;
     left: 0px;
     top: 0px;
-    background: #af9f8c;
+    background: #47827c;
     opacity: 0;
     transition: opacity 1.3s;
   }
@@ -373,3 +336,50 @@ legend {
   #progress.active span::after{content:'';text-transform:uppercase;font-size:10px;line-height:16px;opacity:0;transition:opacity 200ms ease-in-out}
   #progress.active span::after{opacity:1.0}
   
+
+@media only screen and (min-width:1920px){
+    .notice::before{content:"1920px ~"}
+    html{font-size: 15px;}
+    .img-view{width: 600px;}
+    .sub{font-size: 1.5rem}
+}
+@media only screen and (min-width:1440px) and (max-width:1919px){
+    .notice::before{content:"1440px ~ 1919px"}
+    html{font-size: 13px;}
+    .img-view{width: 600px;}
+    .img-view .caption {top: 30%;}
+    .sub{font-size: 1.5rem}
+}
+@media only screen and (min-width:1237px) and (max-width:1439px){
+    .notice::before{content:"1280px ~ 1439px"}
+    .img-view {width: 600px;}
+    .img-view .caption {top: 24%;}
+}
+@media only screen and (min-width:1024px) and (max-width:1237px){
+    .notice::before{content:"1024px ~ 1246px"}
+    .img-view {width: 500px;}
+    .img-view .caption {top: 24%;}
+}
+@media only screen and (max-width:1023px){
+    .img-view {width: 450px;}
+    .img-view .caption {top: 24%;}
+
+}
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .notice::before{content:"768px ~ 1023px"}
+}
+@media only screen and (min-width:586px) and (max-width:767px){
+    .notice::before{content:"586px ~ 767px"}
+}
+@media only screen and (min-width:414px) and (max-width:585px){
+    .notice::before{content:"414px ~ 585px"}
+}
+@media only screen and (min-width:375px) and (max-width:413px){
+    .notice::before{content:"375px ~ 413px"}
+}
+@media only screen and (min-width:320px) and (max-width:374px){
+    .notice::before{content:"320px ~ 374px"}
+}
+@media only screen and (max-width:319px){
+    .notice::before{content:"~ 319px"}
+}

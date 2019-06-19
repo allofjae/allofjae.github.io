@@ -12,12 +12,10 @@ var $listEl = document.querySelectorAll("a");
 window.addEventListener("mousemove", OnMouseMoveWindow);
 
 function OnMouseMoveWindow(e) {
-    // 현재 커서의 좌표값 찾기
-    // console.log(e);
-    var posX = e.pageX, posY = e.pageY;
-    TweenMax.to($cursorDot, 0.15, {css : {top : posY, left : posX}, ease: Quad.easeInOut});
+    var posX = e.clientX, posY = e.clientY;
+    TweenMax.to($cursorDot, 0.1, {css : {top : posY, left : posX}, ease: Quad.easeInOut});
     TweenMax.to($cursorBG, 0.1, {css : {top : posY, left : posX}, ease: Quad.easeInOut});
-    TweenMax.to($progress, 0.15, {css : {top : posY, left : posX}, ease: Quad.easeInOut});
+    TweenMax.to($progress, 0.1, {css : {top : posY, left : posX}, ease: Quad.easeInOut});
 }
 for(var i = 0;i < $listEl.length; i++) {
     $listEl[i].addEventListener("mouseenter", function(){

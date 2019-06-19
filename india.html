@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Layout</title>
     <link rel="stylesheet" href="./css/style.css"/>
     <link rel="stylesheet" href="./css/india.css"/>
@@ -25,100 +24,83 @@
         </div>
         <!-- full page nav -->
         <div class="menu-container">
-            <ul class="menu">
-                <li class="menu-link"><a class="link" href="index.html">Home</a></li>
-                <li class="menu-link"><a class="link" href="india.html">Family</a></li>
-                <li class="menu-link"><a class="link" href="#">India Stoker</a></li>
-                <li class="menu-link"><a class="link" href="#">Secret</a></li>
-                <li class="menu-link menu-line"></li>
-                <li class="menu-link"><a class="link" href="Duet.html">Duet</a></li>
-            <div class="menu-info">
-                <p>STOKER 2013</p>
-            </div>
+                <ul class="menu">
+                    <li class="menu-link"><a class="link" href="index.html">Home</a></li>
+                    <li class="menu-link"><a class="link" href="family.html">Family</a></li>
+                    <li class="menu-link"><a class="link" href="india.html">India Stoker</a></li>
+                    <li class="menu-link menu-line"></li>
+                    <li class="menu-link"><a class="link" href="Duet.html">Duet</a></li>
+                </ul>
+                <div class="menu-info">
+                        <p>Copyrightⓒ2013 STOKER All rights reserved.</p>
+                </div>
         </div>
     </nav>
 </header>
-
-<!-- slide -->
-<div id="my-fullpage" class="mn-fullpage">
-  <div class="mn-fullpage-pages">
-    <div class="mn-fullpage-page">
-      <div class="page-content">
-          <div class="info">
-            <div class="pop">
-              <div class="container">
-                <a href="#"> <img class="slide_img" src="./img/india.jpg" alt=""></a>
-                <span id="edit">view more</span>
+    <div class="page-content">
+        <div class="info">
+          <div class="pop">
+            <div class="container">
+                <div class="img-view">
+                <img src="./img/india.jpg"/>
+                  <div class="caption">
+                    <div class="content">
+                      <p>VIEW MORE</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- content pop up  -->
+            <div class="box-modal">
+            <div class="overlay"></div>
+            <div class="body-modal">
+              <div class="inner-body-modal">
+                  <a href="#"> <img class="india" src="./img/india2.jpg" alt=""></a>
               </div>
-              <!-- content pop up  -->
-              <div class="box-modal">
-              <div class="overlay"></div>
-              <div class="body-modal">
-                <div class="inner-body-modal">
-                    <a href="#"> <img class="india" src="./img/india2.jpg" alt=""></a>
-                </div>
-                <div class="inner-body-modal">
-                    <a href="#"> <img class="india2" src="./img/india3.jpg" alt=""></a>
-                </div>
-                <div class="inner-body-modal">
-                    <a href="#"> <img class="india3" src="./img/india4.jpg" alt=""></a>
-                </div>
-                <div class="inner-body-modal">
-                    <a href="#"> <img class="india4" src="./img/india5.jpg" alt=""></a>
-                </div>
-                <div class="inner-body-modal">
-                    <a href="#"> <img class="india5" src="./img/india6.png" alt=""></a>
-                </div>
+              <div class="inner-body-modal">
+                  <a href="#"> <img class="india2" src="./img/india3.jpg" alt=""></a>
+              </div>
+              <div class="inner-body-modal">
+                  <a href="#"> <img class="india3" src="./img/india4.jpg" alt=""></a>
+              </div>
+              <div class="inner-body-modal">
+                  <a href="#"> <img class="india4" src="./img/india5.jpg" alt=""></a>
+              </div>
+              <div class="inner-body-modal">
+                  <a href="#"> <img class="india5" src="./img/india6.png" alt=""></a>
               </div>
             </div>
           </div>
-          <p class="sub">
-              just as the flower does not choose its color, we are not responsible for what we have come to be. Only once you realize this you become free and to become adult
-          </p>
-          <!-- text animate -->
-          <div class="animate">
-          <fieldset>
-              <legend>
-                  <span class="text t-1">I
-                  </span><span class="text t-2">n
-                  </span><span class="text t-3">d
-                  </span><span class="text t-4">i
-                  </span><span class="text t-5">a</span>
-              </legend>
-          </fieldset>
-          </div>
         </div>
-     </div>
+        <p class="sub">
+            I wear my father's belt tied around my mother's blouse, and shoes which are from my uncle. This is me. <br><br>
+            저도 지금 엄마의 블라우스 위에 아빠의 벨트, 삼촌이 사준 구두를 신고있죠. 이게 나에요.
+        </p>
+        <!-- text animate -->
+        <div class="animate">
+        <fieldset>
+            <legend>
+                <span class="text t-1">I
+                </span><span class="text t-2">n
+                </span><span class="text t-3">d
+                </span><span class="text t-4">i
+                </span><span class="text t-5">a</span>
+            </legend>
+        </fieldset>
+        </div>
+      </div>
   </div>
-  <div class="mn-fullpage-page">
-    <div class="page-content">
-      <h1>2</h1>
-    </div>
-  </div>
-  <div class="mn-fullpage-page">
-    <div class="page-content">
-      <h1>3</h1>
-    </div>
-  </div>
-  <div class="mn-fullpage-page">
-    <div class="page-content">
-      <h1>4</h1>
-  </div>
-    </div>
-  </div>
-</div>      
-</div>
 <!-- mouse cursor -->
 <div id="cursor-dot">&nbsp;</div>
 <div id="cursor-bg">&nbsp;</div>
 <div id="progress"><span>&nbsp;</span></div>
 
 <!-- footer -->
-<footer id="global-footer">
+<!-- <footer id="global-footer">
     <div class="gf-content">
         <h2>Footer</h2>
     </div>
-</footer>
+</footer> -->
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -128,7 +110,7 @@
 <script src="./js/cursor.js"></script>
 <!-- overay event, bg blur effect -->
 <script>
-  $('#edit').on('click', function(){
+  $('.img-view').on('click', function(){
   $('.slide_img').addClass('active-modal');
   $('.logo-text').addClass('active-modal');
   $('.box-modal').addClass('modal-show');

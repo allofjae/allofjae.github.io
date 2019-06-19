@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700|Playfair+Display:400,900&display=swap');
 body {
-  min-width:1440px;
-  max-width: 1024px;  
-  height: 100vh;
-  max-height: 700px;
+  max-width:1920px;
+  min-width: 980px;  
+  max-height: 500px;
   font-size: 16px;
   background: #fff;
   font-family: 'Playfair Display', serif;
+  width: 100vw;
+  padding: 10vh 10vw 0 10vw;
+  height: 1080px;
+  overflow: hidden;
 }
 
 section {
@@ -28,17 +31,14 @@ header {
 #play {
   height: 40px;
   width: 40px;
+  margin-right: 50px;
   border: 0;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/1383113001_playback_play.png") center center no-repeat;
-}
-#play:focus {
-  outline: none;
 }
 
 #pause {
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/1383113014_playback_pause.png") center center no-repeat;
   height: 30px;
   width: 30px;
+  margin-right: 50px;
   border: 0;
 }
 #pause:focus {
@@ -47,64 +47,95 @@ header {
 
 h1 {
   font-size: 1.5em;
-  color: #333;
+  color: #fff;
 }
 
 h2 {
   margin: 5px 0;
-  color: #95a5a6;
+  color: #fff;
+}
+
+.logo-text {
+  display: block;
+  position: fixed;
+  z-index: 9999;
+  top: 5vh;
+  left :10vw;
+  font-size: 20px;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .bg-image{
-  background: url("../img/india_piano.jpg");
+  position: fixed;
+  animation-name: loaded-image;
+  animation-duration: 2s;
+  animation-delay: 0.5;
+  animation-direction: foward;
+  animation-fill-mode: forwards;
+  opacity: 1;
+  min-height: 100%;
+  min-width: 1024px;
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom:0;
+  right:0;
+  margin:auto;
+}
+#bg-image{
+  position: fixed;
+  animation-name: loaded-image;
+  animation-duration: 2s;
+  animation-delay: 0.5;
+  animation-direction: foward;
+  animation-fill-mode: forwards;
+  opacity: 1;
+  min-height: 100%;
+  min-width: 1024px;
+  z-index: -9999;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom:0;
+  right:0;
+  margin:auto;
+}
+.bg2{
+  position: fixed;
+  background: url("../img/.bg2.jpg");
   background-repeat: none;
   background-size: cover;
-  background-position: center;
-  height: 100vh;
   animation-name: loaded-image;
-  animation-duration: 5s;
-  animation-delay: 1;
+  animation-duration: 2s;
+  animation-delay: 0.5;
   animation-direction: foward;
-  animation-fill-mode: linear;
-}
-
-.image-wrapper{
-  background: 
-  linear-gradient(to bottom, rgba(35, 99, 83, 0), rgb(30, 104, 85)),
-  linear-gradient(to top, rgba(28, 99, 81, 0), rgba(90, 26, 22, 0.8));
-  height: 100vh;
-}
-
-@keyframes loaded-image{
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
-.player {
+  animation-fill-mode: forwards;
+  opacity: 1;
+  min-height: 100%;
+  min-width: 1024px;
+  z-index: -9999;
   width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom:0;
+  right:0;
+  margin:auto;
 }
 
-.left {
-  line-height: 170%;
-  padding: 30px 20px;
-  float: left;
-  width: 190px;
-}
-
-.right {
-  padding: 30px 0;
-  float: left;
-  width: 150px;
-  text-align: center;
-}
 .bg-image .image-wrapper h1{
   color: rgb(255, 255, 255);
+  text-align: center;
   font-family: 'Playfair Display', serif;
   position: relative;
-  text-align: center;
   top: 60vh;
   font-size: 50px;
   -webkit-transition:color 2s;
@@ -118,6 +149,48 @@ h2 {
   top: 20%;
   letter-spacing: 2px;
   line-height: 1.8em;
+}
+
+.image-wrapper{
+  background: 
+  linear-gradient(to bottom, rgba(77, 77, 77, 0), rgba(0, 0, 0, 0.8)),
+  linear-gradient(to top, rgba(75, 75, 75, 0), rgba(30, 104, 85, 0.8));
+  height: 100vh;
+}
+
+@keyframes loaded-image{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 0.8;
+  }
+}
+.player {
+  width: 100%;
+  position: absolute;
+  top: 20vh;
+}
+#song{
+  width: 100%;
+  height: 100%;
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: -9vw;
+  line-height: 170%;
+  width: 500px;
+}
+
+.right {
+  position: absolute;
+  top: 5vh;
+  left: -9vw;
+  padding: 30px 0;
+  width: 500px;
+  text-align: left;
 }
 
 

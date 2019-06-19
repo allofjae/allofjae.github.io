@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+}
+* body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  max-width: 1920px;
+  min-width: 980px;
+  width: 100%;
+  height: 1080px;
+  overflow: hidden;
+}
+* body .slide-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+* body .slide-container .slides img {
+  filter: grayscale(90%);
+  opacity: 0.7;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+}
+* body .slide-container .slides .text-container {
+  color: #f2f2f2;
+  font-size: 15px;
+  margin-left: 10vw;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  width: 45%;
+  text-align: justify;
+}
+* body .slide-container .slides .text-container h1 {
+  font-size: 44px;
+  font-family: "Fira Sans", sans-serif;
+}
+* body .slide-container .slides .text-container p {
+  font-size: 19px;
+  margin-top: 50px;
+  line-height: 1.5;
+}
+* body .slide-container .slides .text-container button {
+  width: 140px;
+  height: 42px;
+  margin-top: 100px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: "Fira Sans", sans-serif;
+  color: #bbb;
+  font-weight: 600s;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+* body .slide-container .slides .text-container button:hover {
+  background-color: transparent;
+  border: 2px solid #bbb;
+}
+* body .slide-container .change {
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 1.5s;
+  animation-name: change;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes change {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes change {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+* body .dot-container {
+  text-align: center;
+  margin-top: 43%;
+}
+* body .dot-container .dot {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 7px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  transition: background-color 0.8s linear;
+  position: sticky;
+  text-align: center;
+}
+* body .dot-container .active, * body .dot-container .dot:hover {
+  background-color: #202020ee;
+  border: 2px solid #cac9c9;
+}
+.logo-text {
+  display: block;
+  position: fixed;
+  z-index: 9999;
+  top: 5vh;
+  left :10vw;
+  font-size: 20px;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Libre Baskerville', serif;
+}
+/* 팝 업 */
+#main{
+  max-width: 1920px;
+  min-width: 980px;
+  width: 100%;
+  height: 100vh;
+}
+.box-modal {
+  z-index: 10000;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  visibility: hidden;
+}
+.box-modal .overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background: #af9f8c;
+  opacity: 0;
+  transition: opacity 1.3s;
+}
+
+body.active-modal {
+  overflow: hidden;
+}
+body.active-modal header.header {
+  transition: 0.2s;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+header.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  transition: 0.2s;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+}
+.container .avatar {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 15px;
+  background: 
+  linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(41, 119, 92, 0.5));
+  height: 100vh;
+  z-index: 9999;
+}
+.container h1{
+  position: absolute;
+  top: 40%;
+  left: 10vw;
+  border-bottom: #fff;
+  color: #fff;
+  font-size: 4rem;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+}
+.container p{
+  position: absolute;
+  top: 50%;
+  left: 10vw;
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 170%;
+  width: 33%;
+  text-align: left;
+}
+.container .avatar img {
+  opacity: 0.7;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: none;
+}
+.container span {
+  display: inline-block;
+  position: absolute;
+  top: 70%;
+  left: 10vw;
+  background: #fff;
+  border-radius: 100px;
+  padding: 10px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.box-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  visibility: hidden;
+}
+.box-modal .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background: #000;
+  opacity: 0;
+  transition: opacity 1.3s;
+}
+.box-modal .body-modal {
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+}
+.box-modal .body-modal .inner-body-modal {
+  background: #fff;
+  width: 100%;
+  padding: 25px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.43);
+}
+.box-modal.modal-show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: visible;
+  transition: all 0.9s;
+}
+.box-modal.modal-show .overlay {
+  opacity: 0.5;
+  transition: opacity 1.3s;
+}
+.box-modal.modal-show .body-modal {
+  max-height: 1000px;
+  z-index: 9999;
+  opacity: 1;
+  transition: 0.3s max-height 0.8s, 0.3s opacity 0.6s;
+}
+.navigation .hamburger-menu .hamburger::before, .navigation .hamburger-menu .hamburger::after {
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  transition: all .3s;
+}
