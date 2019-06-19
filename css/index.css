@@ -238,26 +238,26 @@ body {
     html{font-size: 15px;}
     .hide_sub{margin-top: 90px;}
     .index{font-size: 200%}
-    .insub{font-size: 0.9rem}
+    .insub{font-size: 0.8rem}
     .animate-slide.ng-hide {top:82%;}
 }
 @media only screen and (min-width:1440px) and (max-width:1919px){
     .notice::before{content:"1440px ~ 1919px"}
     html{font-size: 13px;}
     .index{font-size: 200%}
-    .insub{font-size: 0.9rem}
+    .insub{font-size: 0.8rem}
     .animate-slide.ng-hide {top:82%;}
 }
 @media only screen and (min-width:1237px) and (max-width:1439px){
     .notice::before{content:"1280px ~ 1439px"}
     .index{font-size: 180%}
-    .insub{font-size: 0.9rem}
+    .insub{font-size: 0.8rem}
     .animate-slide.ng-hide {top:81%;}
 }
 @media only screen and (min-width:1024px) and (max-width:1237px){
     .notice::before{content:"1024px ~ 1246px"}
     .index{font-size: 160%}
-    .insub{font-size: 0.8rem}
+    .insub{font-size: 0.7rem}
     .hide_sub{margin-left: 0; margin-top: 20px;font-size: 0.9rem}
     .animate-slide.ng-hide {top:82%;}
 }
@@ -269,7 +269,7 @@ body {
     #global-footer .gf-content{width:100%}
     .hide_sub{margin-top: 20px;}
     .index{font-size: 140%}
-    .insub{font-size: 0.8rem}
+    .insub{font-size: 0.7rem}
     .hide_sub{margin-left: 0;font-size: 0.9rem}
     .animate-slide.ng-hide {top:83%;}
     
@@ -278,7 +278,7 @@ body {
     .notice::before{content:"768px ~ 1023px"}
     .hide_sub{margin-top: 20px;}
     .index{font-size: 135%}
-    .insub{font-size: 0.8rem}
+    .insub{font-size: 0.7rem}
     .hide_sub{margin-left: 0;font-size: 0.9rem}
     .animate-slide.ng-hide {top:83%;}
 }
@@ -286,7 +286,7 @@ body {
     .notice::before{content:"586px ~ 767px"}
     .hide_sub{margin-top: 20px;}
     .index{font-size: 130%}
-    .insub{font-size: 0.8rem}
+    .insub{font-size: 0.7rem}
     .hide_sub{margin-left: 0;font-size: 0.9rem}
     .animate-slide.ng-hide {top:83%;}
 }
