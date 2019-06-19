@@ -341,14 +341,14 @@ legend {
     .notice::before{content:"1920px ~"}
     html{font-size: 15px;}
     .img-view{width: 600px;}
-    .sub{font-size: 1.5rem}
+    .sub{font-size: 1.2rem}
 }
 @media only screen and (min-width:1440px) and (max-width:1919px){
     .notice::before{content:"1440px ~ 1919px"}
     html{font-size: 13px;}
     .img-view{width: 600px;}
     .img-view .caption {top: 30%;}
-    .sub{font-size: 1.5rem}
+    .sub{font-size: 1.2rem}
 }
 @media only screen and (min-width:1237px) and (max-width:1439px){
     .notice::before{content:"1280px ~ 1439px"}
